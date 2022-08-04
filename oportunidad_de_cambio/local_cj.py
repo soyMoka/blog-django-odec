@@ -1,3 +1,6 @@
+# python manage.py runserver --settings=oportunidad_de_cambio.local_cj
+
+
 from .settings import * 
 
 DEBUG = True 
@@ -9,7 +12,6 @@ ALLOWED_HOSTS = ['*']
 
 
 
-# python manage.py runserver --settings=oportunidad_de_cambio.local_cj
 
 
 
