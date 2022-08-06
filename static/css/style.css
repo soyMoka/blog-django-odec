@@ -2,9 +2,16 @@
 body{
     margin: 0;
     padding:0;
-    background-color: #2b895128;
+    /* patron */
+    background-color: #2b89512e;
+    /* End patron */
 }
+
 .navigation-bar {
+    position: sticky;
+    top:0;
+    box-shadow: 0 1px 4px #474747;
+
     display: flex;
     justify-content: space-between;
     width: 100%;  /* i'm assuming full width */
@@ -83,11 +90,14 @@ margin-right: 1em;
 /* Body */
 
 .contenido{
+    box-shadow: 2px 2px 5px #474747;
+
     margin-left: auto;
     margin-right: auto;
-    
+    padding: 1em;
     display: block;
     margin-top: 30px;
+    margin-bottom: 2em;
     max-width: 1000px;
     background-color: #FEFEFE;
     text-align: center;
