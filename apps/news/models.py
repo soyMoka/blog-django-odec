@@ -1,5 +1,5 @@
 from django.db import models
-
+from ckeditor.fields import RichTextField
 # Create your models here.
 
 #---------------------||CATEGORIAS
@@ -14,7 +14,7 @@ class Categorias(models.Model):
 class News (models.Model):
     title = models.CharField(max_length=200, null = False)
     date = models.DateTimeField(auto_now_add = True)
-    text = models.TextField(null = True)
+    text = RichTextField(blank=True, null = True)
     active = models.BooleanField(default = True)
     imagen = models.ImageField(upload_to='news', default = 'news/default.png')
     Categorias = models.ForeignKey(Categorias, on_delete=models.SET_NULL, null=True)

@@ -4,7 +4,7 @@
 
     {% if object_list %}
 
-        {% for p in object_list %}
+        {% for p in object_list reversed %}
 
             <div class="contenido">
 
@@ -12,8 +12,9 @@
                 
                 <img class="post_img" src={{p.imagen.url}} alt="">
 
-                <p>{{p.text}}</p>
-
+                <p>{{p.text |slice:":200" |safe}}</p>
+                <!-- |safe (rich text format), slice(limite de caracteres) -->
+    
                 <p class="post_date">{{date}}</p>
             </div>
 
@@ -24,10 +25,11 @@
         <div class="contenido">
 
             <h2 class="">{{p.title}}</h2>
-            
+
             <img class="post_img" src={{p.imagen.url}} alt="">
 
-            <p>{{p.text}}</p>
+            <p>{{p.text |slice:":200" |safe}}</p>
+            <!-- |safe (rich text format), slice(limite de caracteres) -->
 
             <p class="post_date">{{date}}</p>
         </div>
