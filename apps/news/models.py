@@ -1,5 +1,6 @@
 from django.db import models
 from ckeditor.fields import RichTextField
+from django.urls import reverse
 # Create your models here.
 
 #---------------------||CATEGORIAS
@@ -18,8 +19,12 @@ class News (models.Model):
     active = models.BooleanField(default = True)
     imagen = models.ImageField(upload_to='news', default = 'news/default.png')
     Categorias = models.ForeignKey(Categorias, on_delete=models.SET_NULL, null=True)
-
-    #usuario
+   # Autor = models.ForeignKey(Usuario, on_delete=models.CASCADE, default='uknown')
+    
     
     def __str__ (self):
         return self.title
+
+    def get_absolute_url(self):
+        return reverse('news_detail', args=(str(self.id)))
+

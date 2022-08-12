@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{%block title%}- Editar post{%endblock%}
+
+{%block contenido%}
+
+<div class="contenido">
+
+    <h1>{{news.title}}</h1>
+    <img src="{{news.imagen.url}}" alt="">
+    {{news.text|safe}}
+
+
+
+
+</div>
+
+{%endblock%}

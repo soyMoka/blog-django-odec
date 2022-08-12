@@ -19,10 +19,19 @@ from django.conf import settings
 from django.conf.urls.static import static
 from .views import Index
 
+
 urlpatterns = [
+
     path('admin/', admin.site.urls),
     path('', Index, name="index"),
     path('news/', include('apps.news.urls')),
+    path('usuario/', include('apps.usuario.urls')),
+    
+
+
+
+#   Usuario
+#    path('register/', user_views.register, name='register'),
 #    path('usuario/', include('apps.usuario.urls')),
 #    path('comentarios/', include('apps.comentarios.urls')),
  

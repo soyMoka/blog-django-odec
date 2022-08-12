@@ -4,7 +4,17 @@
     <ul>
 
         <li><a href="#">¿Quienes somos?</a></li>
-        <li><a href="#">Novedades</a></li>
+        <li><a href="{% url 'apps.news:news_list' %}">Novedades</a></li>
+        <li>
+            <div class="dropdown">
+                <button class="dropbtn">Dropdown</button>
+                <div class="dropdown-content">
+                  <a href="#">Link 1</a>
+                  <a href="#">Link 2</a>
+                  <a href="#">Link 3</a>
+                </div>
+              </div> 
+        </li> 
         <li><a href="#">Eventos</a></li>  
         <li><a href="#">Contacto</a></li>
         <a class='button01' href="#">Ingresar</a>

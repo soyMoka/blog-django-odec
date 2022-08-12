@@ -1,18 +1,18 @@
 {% extends 'base.html' %}
+{%block title%}- Editar post{%endblock%}
 
-{%block title%}- Agregar post{%endblock%}
 {%block contenido%}
 
 <div class="contenido">
 
-    <h1>Crear noticia</h1>
+    <h1>Editar post</h1>
 
     <form method="post">
         {% csrf_token %}
 
         {{form.media}} <!-- esto es el editor :D -->
         {{form.as_p |safe}}
-        <input type="submit" value="Save">
+        <button class='button01'>Terminar edición</button>>
 
     </form>
 

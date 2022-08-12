@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 
+{%block title%}- Ver posts{%endblock%}
 {%block contenido%}
 
     {% if object_list %}
@@ -8,14 +9,16 @@
 
             <div class="contenido">
 
-                <h2 class="">{{p.title}}</h2>
+                <h2 class="">{{p.title}}</h2> 
                 
                 <img class="post_img" src={{p.imagen.url}} alt="">
 
                 <p>{{p.text |slice:":200" |safe}}</p>
                 <!-- |safe (rich text format), slice(limite de caracteres) -->
-    
-                <p class="post_date">{{date}}</p>
+                <a >Seguir leyendo...</a>
+                <a href="{% url 'apps.news:news_detail' p.id  %}">read more</a>
+                <p class="post_date">{{date}}</p> 
+               
             </div>
 
         {% endfor %}
