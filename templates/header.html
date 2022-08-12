@@ -1,6 +1,6 @@
 
 <nav class="navigation-bar">
-    <a href=""><img class="logo" src="/static/logo_svg_b&w.png"></a>
+    <a href="{% url 'index' %}"><img class="logo" src="/static/logo_svg_b&w.png"></a>
     <ul>
 
         <li><a href="#">¿Quienes somos?</a></li>
@@ -9,9 +9,8 @@
             <div class="dropdown">
                 <button class="dropbtn">Dropdown</button>
                 <div class="dropdown-content">
-                  <a href="#">Link 1</a>
-                  <a href="#">Link 2</a>
-                  <a href="#">Link 3</a>
+                  <a href="{% url 'apps.news:news_list' %}">Listar_post</a>
+                  <a href="{% url 'apps.news:news_add' %}">Agregar_post</a>
                 </div>
               </div> 
         </li> 

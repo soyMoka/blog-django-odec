@@ -15,8 +15,9 @@
 
                 <p>{{p.text |slice:":200" |safe}}</p>
                 <!-- |safe (rich text format), slice(limite de caracteres) -->
-                <a >Seguir leyendo...</a>
-                <a href="{% url 'apps.news:news_detail' p.id  %}">read more</a>
+               
+                <a class="button00" href="{% url 'apps.news:news_detail' p.id  %}">read more</a><span> | </span>
+                <a class="admin button01" href="{% url 'apps.news:news_edit' p.id  %}">Editar</a>
                 <p class="post_date">{{date}}</p> 
                
             </div>

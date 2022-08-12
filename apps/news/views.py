@@ -41,7 +41,7 @@ class newsDetailView(DetailView):
 
 
 ###############| ReadPost de Augusto |#########################
-
+""" 
 def ReadPost(request, id):
 	try:
 		posts = ExistePost(id)
@@ -68,14 +68,15 @@ def ReadPost(request, id):
 	}
 	return render(request,'post/post.html', context)
 
-
+"""
+""" 
 def ExistePost(id):
 	for i in cache.get('posts'):
 		if i.id == id:
 			return i
 	return None
 
-
+"""
 #######################################
 
 def ListarNews(request):

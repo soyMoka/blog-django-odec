@@ -86,6 +86,29 @@ margin-right: 1em;
     border-radius: 20px;
 }
 
+
+.button00{
+    display: inline;
+    text-decoration: solid #FEFEFE 10px;
+    color: #fff;
+    text-decoration: solid;
+    height:50%;
+    background-color: #2B8951;
+    padding: 10px 20px 10px 20px ;
+    border-radius: 20px;
+}
+.button00:hover{
+    display: inline;
+    text-decoration: solid #FEFEFE 10px;
+    color: #2B8951;
+    text-decoration: solid;
+    height:50%;
+    background-color: #FEFEFE;
+    box-shadow: inset 0 0 0 2px #2B8951;
+    padding: 10px 20px 10px 20px ;
+    border-radius: 20px;
+}
+
 /* End Buttons ----------------------------------- */
 /* Body */
 
@@ -94,6 +117,8 @@ margin-right: 1em;
 
     margin-left: auto;
     margin-right: auto;
+
+
     padding: 1em;
     display: block;
     margin-top: 30px;
@@ -125,20 +150,25 @@ h1{
   .dropdown {
     position: relative;
     display: inline-block;
+    width: 100%;
   }
   
   /* contenido del dropdown(Hidden by Default) */
   .dropdown-content {
+
     display: none;
-    align-items: center ;
+    align-items:stretch  ;
     position: absolute;
     background-color: #FEFEFE;
     border-radius: 20px;
+
     min-width: 100%;
-    z-index: 1;
+    z-index: 10;
+    padding: auto;
 
 
-    box-shadow: 0px 0px 5px #474747;
+
+    box-shadow: 2px 2px 4px #474747;
   }
   
   /* Links dentro del dropdown */
@@ -147,7 +177,6 @@ h1{
     color: #2B8951;
     text-decoration: solid;
     background-color: #FEFEFE;
-    box-shadow: inset 0 0 0 2px #2B8951;
     padding: 10px 20px 10px 20px ;
     border-radius: 20px;
     text-align: center;
@@ -155,9 +184,8 @@ h1{
   
   /* Change color of dropdown links on hover */
   .dropdown-content a:hover {
-    text-decoration: none;
-        background-color: #2B8951;
-        color: #FEFEFE;
+        box-shadow: inset 0 0 0 2px #2B8951;
+        color: #2B8951;
         text-align: center;
     }
   
@@ -181,3 +209,59 @@ h1{
         
         border-radius: 20px;
     }
+
+
+
+
+    /* ||Footer ---------------------------- */
+
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    
+    position: relative;
+    width: 100%;
+    
+    background-color: #FEFEFE;
+    flex-direction: row;
+    align-content: space-around;
+    justify-content: center;
+    
+}
+footer > div{
+    margin: 30px;
+    justify-items: flex-start;
+    align-self: center;
+}
+
+.footer_redes{
+    text-align: center;
+    
+}
+.footer_redes>p{
+    font-size: 1.2em;
+}
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 1em;
+    text-align:center;
+    text-decoration: none;
+  }
+  
+  /* Add a hover effect if you want */
+  .fa:hover {
+    opacity: 0.7;
+  }
+  
+  /* Set a specific color for each brand */
+  
+  /* Facebook */
+  .fa-facebook {
+    background: #3B5998;
+    border-radius: 40px;
+    color: white;
+  }
+
+
